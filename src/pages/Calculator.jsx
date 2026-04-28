@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import PageHeader from "../components/PageHeader";
 import CalculatorForm from "../components/CalculatorForm";
 import ResultsSummary from "../components/ResultsSummary";
 import ResultsBreakdown from "../components/ResultsBreakdown";
@@ -48,11 +49,10 @@ function CalculatorPage() {
 
   return (
     <Container className="py-4" style={{ maxWidth: "900px" }}>
-      <h1 className="mb-2">Carbon Emissions Calculator</h1>
-      <p className="text-muted mb-4">
-        Estimate your annual carbon footprint based on your transportation,
-        energy use, and diet.
-      </p>
+      <PageHeader
+        title="Carbon Emissions Calculator"
+        subtitle="Estimate your annual carbon footprint based on your transportation, energy use, and diet."
+      />
 
       <Row>
         <Col lg={results ? 6 : 12}>

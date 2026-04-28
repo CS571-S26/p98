@@ -21,7 +21,9 @@ function CalculatorForm({ onSubmit }) {
   return (
     <Form noValidate onSubmit={handleSubmit(onSubmit)}>
       <Card className="mb-4">
-        <Card.Header as="h5">Transportation</Card.Header>
+        <Card.Header as="h2" className="fs-5">
+          Transportation
+        </Card.Header>
         <Card.Body>
           <Row className="mb-3">
             <Col sm={6}>
@@ -95,7 +97,9 @@ function CalculatorForm({ onSubmit }) {
       </Card>
 
       <Card className="mb-4">
-        <Card.Header as="h5">Home Energy</Card.Header>
+        <Card.Header as="h2" className="fs-5">
+          Home Energy
+        </Card.Header>
         <Card.Body>
           <Row>
             <Col sm={6}>
@@ -130,7 +134,9 @@ function CalculatorForm({ onSubmit }) {
       </Card>
 
       <Card className="mb-4">
-        <Card.Header as="h5">Diet</Card.Header>
+        <Card.Header as="h2" className="fs-5">
+          Diet
+        </Card.Header>
         <Card.Body>
           <Form.Group controlId="diet">
             <Form.Label>How would you describe your diet?</Form.Label>

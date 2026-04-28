@@ -1,24 +1,47 @@
-import { Col, Container, Row, Image } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
+import HeroSection from "../components/HeroSection";
+import FeatureCard from "../components/FeatureCard";
 import illustration from "../assets/home-illustration.png";
 
 function HomePage() {
   return (
-    <Container className="py-3">
-      <Row>
-        <Col sm={12} md={6} lg={4}>
-          <Image src={illustration} rounded width="100%" />
-        </Col>
-        <Col sm={12} md={6} lg={8}>
-          <h1>EcoTrack</h1>
-          <p className="fs-4">Learn all about global warming and how you can help!</p>
-          <p>
-            Select a option from the navigation bar to continue.
-            Made by <a target="_blank" href="https://mmaeder.com">Max Maeder</a>.
-          </p>
-        </Col>
-      </Row>
-    </Container>
-  )
+    <>
+      <HeroSection imageSrc={illustration} />
+
+      <Container className="pb-5">
+        <h2 className="mb-4">Explore</h2>
+        <Row className="g-4">
+          <Col sm={12} md={4}>
+            <FeatureCard
+              title="Carbon Calculator"
+              description="Estimate your annual carbon footprint based on your travel, energy use, and diet."
+              linkTo="/calculator"
+              linkLabel="Get Started"
+              variant="success"
+            />
+          </Col>
+          <Col sm={12} md={4}>
+            <FeatureCard
+              title="Global Warming"
+              description="Understand what global warming is, its causes, and what we can do about it."
+              linkTo="/articles/global-warming"
+              linkLabel="Read Article"
+              variant="outline-primary"
+            />
+          </Col>
+          <Col sm={12} md={4}>
+            <FeatureCard
+              title="Carbon Footprint"
+              description="Learn what a carbon footprint is and practical ways to reduce yours."
+              linkTo="/articles/carbon-footprint"
+              linkLabel="Read Article"
+              variant="outline-primary"
+            />
+          </Col>
+        </Row>
+      </Container>
+    </>
+  );
 }
 
 export default HomePage;
